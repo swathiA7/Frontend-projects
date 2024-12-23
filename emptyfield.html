@@ -1,0 +1,91 @@
+<html>
+ <head>
+ <script>
+ function validateForm()
+ {
+ var un = document.registration.uname.value;
+ var pass = document.registration.pwd.value;
+ var gen = document.registration.gender.value;
+ var age = document.registration.age.value;
+ var mail = document.registration.email.value;
+ var cntry = document.registration.country.value;
+ var lan = document.registration.lang;
+ if(un=="" || un=="null")
+ {
+ alert("please enter ur name");
+ document.registration.uname.focus();
+ return false;
+ }
+ if(pass=="" || pass=="null")
+ {
+ alert("please enter ur password");
+ document.registration.pwd.focus();
+ return false;
+ }
+ if(gen=="" || gen=="null")
+ {
+ alert("Please select the gender");
+ document.registration.gender[0].focus();
+ return false;
+ }
+ if(age=="" || age=="null")
+ {
+ alert("please enter your age");
+ document.registration.age.focus();
+ return false;
+ }
+ Lakireddy Bali Reddy College of Engineering (Autonomous)
+17
+ if(mail=="" || mail=="null")
+ {
+ alert("please enter ur email");
+ document.registration.email.focus();
+ return false;
+ }
+ if(cntry == "Default")
+ {
+ alert("please select your country")
+ document.registration.country.focus();
+ return false;
+ }
+ for (var i=0; i<lan.length; i++)
+ {
+ if(lan[i].checked)
+ break;
+ }
+ if(i==lan.length)
+ {
+ alert("Please choose your languages");
+ document.registration.lang[0].focus();
+ return false;
+ }
+ alert("Registration successfull");
+ return true;
+ }
+ </script>
+ </head>
+ <body>
+ <form name="registration" onsubmit="return validateForm();">
+ Enter your name: <input type="text" name="uname"><br>
+ Enter your password: <input type="password" name="pwd"><br>
+ Choose your Gender: <input type="radio" name="gender" value="Male">Male
+ <input type="radio" name="gender" value="Female">Female<br>
+ Enter your Age: <input type="number" name="age"><br>
+ Enter your email: <input type="text" name="email"><br>
+ Choose ur country: 
+ <select name="country">
+<option value="Default">(Please select a country)</option>
+<option value="aus">Australia</option>
+<option value="can">Canada</option>
+<option value="ind">India</option>
+<option value="rus">Russia</option>
+<option value="usa">USA</option>
+ </select><br>
+ Languages Known: 
+ Telugu: <input type="checkbox" name="lang" value="Telugu"/>
+ English: <input type="checkbox" name="lang" value="English"/>
+ Hindi: <input type="checkbox" name="lang" value="Hindi"/><br>
+ <input type="submit"><input type="reset">
+ </form>
+ </body>
+</html>

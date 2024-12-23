@@ -1,0 +1,115 @@
+<html>
+<head>
+	<meta charset="UFT-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+ 	function validateForm()
+	 {
+		 var sec1 = document.registration.sect1.value;
+		 var sec2 = document.registration.sect2.value;
+		 var rec = document.registration.recp.value;
+		 var ch= document.registration.chef.value;
+		 var date= document.registration.sdate.value;
+		 var com1 = document.registration.comment1.value;
+		 var com2 = document.registration.comment2.value;
+		 var com3 = document.registration.comment3.value;
+		var r1 = document.registration.rate1.value;
+	}
+</script>
+<style>
+img{
+	border:3px  solid indianred;
+	}
+p.double { border-style:double;  color:black; }
+aside2{
+	width:60%;
+	padding-left:20px;
+	margin-left:20px;
+	float:right;
+}
+body{   background-image:url("feedbg.jpg") ;position: relative;
+		background-size:100px;
+		
+	}
+aside1{
+	width:60%;
+	padding-left:20px;
+	margin-left:20px;
+	float:left;
+}
+</style>
+</head>
+<body><a href="head.html"><button>Back</button></a><center>
+<form name="registration" onsubmit="return validateForm();">
+	<p class="double">
+	<h2>Give feedback for Dishses</h2><br>
+	<aside1>
+		<img src="foodfeed.jpg" width="30%" height="17%" > 
+		<img src="nonveg.jpg" width="30%" >
+		<img src="desserts.jpg" width="30%" height="17%" >
+	</aside1>
+	<h3>Select any Particular section:
+		 <select name="sect1">
+		<option value="Default">none</option>
+		<option value="s">starters</option>
+		<option value="o">our signature dishes</option>
+		<option value="v">veg food</option>
+		<option value="nv">non-veg food</option>
+		<option value="d">desserts</option>
+		<option value="f">fast food</option>
+		 </select><br>
+		select any particular item:<input type="text" name="recp"><br><br>
+		<center>your rating for our dishes:<br><input type="radio" name="rate1" value="0">&#9734;&#9734;&#9734;&#9734;&#9734;
+			<input type="radio" name="rate1" value="1">&#9733;&#9734;&#9734;&#9734;&#9734;
+			<input type="radio" name="rate1" value="2">&#9733;&#9733;&#9734;&#9734;&#9734;<br>
+			<input type="radio" name="rate1" value="3">&#9733;&#9733;&#9733;&#9734;&#9734;
+			<input type="radio" name="rate1" value="4">&#9733;&#9733;&#9733;&#9733;&#9734;
+			<input type="radio" name="rate1" value="5">&#9733;&#9733;&#9733;&#9733;&#9733;<br>
+		<textarea rows="3" cols="50" name="comment1">
+		Any comments or suggestions:</textarea></h3></center><p class="double">
+
+	<center><h2>Give feedback for chefs</h2></center>
+	<aside2>
+		<img src="chef1.jpg" width="30%" height="19%" >
+		<img src="chef2.jpg" width="30%" height="19%" >
+		 <img src="chef3.jpg" width="30%" height="19%" ></aside2>
+	<h3>Select any Particular section:
+		 <select name="sect2">
+			<option value="Default">none</option>
+			<option value="s">starters</option>
+			<option value="o">our signature dishes</option>
+			<option value="v">veg food</option>
+			<option value="nv">non-veg food</option>
+			<option value="d">desserts</option>
+			<option value="f">fast food</option>
+		 </select><br>
+	select any particular chef name:<input type="text" name="chef"><br> <br><br>
+		<center>your rating for our chefs:<br><input type="radio" name="rate1" value="0">&#9734;&#9734;&#9734;&#9734;&#9734;
+			<input type="radio" name="rate2" value="1">&#9733;&#9734;&#9734;&#9734;&#9734;
+			<input type="radio" name="rate2" value="2">&#9733;&#9733;&#9734;&#9734;&#9734;<br>
+			<input type="radio" name="rate2" value="3">&#9733;&#9733;&#9733;&#9734;&#9734;
+			<input type="radio" name="rate2" value="4">&#9733;&#9733;&#9733;&#9733;&#9734;
+			<input type="radio" name="rate2" value="5">&#9733;&#9733;&#9733;&#9733;&#9733;<br>
+	<textarea rows="3" cols="50" name="comment2">
+	Any comments or suggestions:</textarea></center> <p class="double">
+
+	<center><h2>Give feedback for our management</h2></center>
+	<aside1>
+		<img src="rm1.jpg" width="30%"> 
+		<img src="rm2.jpg" width="30%" height="16%">
+		<img src="rm3.jpg" width="30%" height="16%">
+	</aside1>
+	<h4><center>your rating for our dishes:<br><input type="radio" name="rate1" value="0">&#9734;&#9734;&#9734;&#9734;&#9734;
+			<input type="radio" name="rate3" value="1">&#9733;&#9734;&#9734;&#9734;&#9734;
+			<input type="radio" name="rate3" value="2">&#9733;&#9733;&#9734;&#9734;&#9734;<br>
+			<input type="radio" name="rate3" value="3">&#9733;&#9733;&#9733;&#9734;&#9734;
+			<input type="radio" name="rate3" value="4">&#9733;&#9733;&#9733;&#9733;&#9734;
+			<input type="radio" name="rate3" value="5">&#9733;&#9733;&#9733;&#9733;&#9733;<br>
+	<textarea rows="3" cols="50" name="comment3">
+	Any comments or suggestions:</textarea></h4></center><p class="double"<br>
+<center>
+	<img src="thank.jpg" width="20%"><br><br>
+	<input type="submit"><input type="reset">
+</center></form>
+</body
+</html>

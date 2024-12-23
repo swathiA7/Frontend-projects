@@ -1,0 +1,133 @@
+<html>
+ <head>
+ <script>
+ 	function validateForm()
+	 {
+		 var un = document.registration.uname.value;
+		 var pass = document.registration.pwd.value;
+		 var gen = document.registration.gender.value;
+		 var time= document.registration.stime.value;
+		 var date= document.registration.sdate.value;
+		 var age = document.registration.age.value;
+		 var mail = document.registration.email.value;
+		 var cntry = document.registration.country.value;
+		 var lan = document.registration.lang;
+		 if(un=="" || un=="null")
+		 {
+			 alert("please enter ur name");
+			 document.registration.uname.focus();
+			 return false;
+		 }
+		 if(pass=="" || pass=="null")
+		 {
+			 alert("please enter ur contact number");
+			 document.registration.pwd.focus();
+			 return false;
+		 }
+		 if(gen=="" || gen=="null")
+		 {
+			 alert("Please select the entry time");
+			 document.registration.gender[0].focus();
+			 return false;
+		 }
+		 if(time=="" || time=="null")
+		 {
+			 alert("Please selecect the spending time");
+			 document.registration.stime[0].focus();
+			 return false;
+		 }
+		 if(date=="" || date=="null")
+		 {
+			 alert("Please select the date");
+			 document.registration.sdate[0].focus();
+			 return false;
+		 }
+		 if(age=="" || age=="null")
+		 {
+			 alert("please enter your desired table number");
+			 document.registration.age.focus();
+			 return false;
+		 }
+		 if(mail=="" || mail=="null")
+		 {
+			 alert("please enter ur email");
+			 document.registration.email.focus();
+			 return false;
+		 }
+		 if(cntry == "Default")
+ 		{
+			 alert("please select an arrangement option")
+			 document.registration.country.focus();
+			 return false;
+		 }
+		 for (var i=0; i<lan.length; i++)
+		 {
+			 if(lan[i].checked)
+			 break;
+		 }
+		 if(i==lan.length)
+		 {
+			 alert("Please choose your languages");
+			 document.registration.lang[0].focus();
+			 return false;
+		 }
+		 alert("Registration successfull");
+		 return true;
+	 }
+ </script>
+ <style>
+	body{   background-image:url("bt.jpg") ;position: relative;
+		background-size:160px;
+		
+	}
+	img{ border:2px solid brown; }
+ </style>
+ </head>
+ <body>
+<a href="head.html"><button>Back</button></a>
+<center>
+ <form name="registration" onsubmit="return validateForm();">
+	<h2>Book Your Table Now.........</h2>
+	 <img src="rm3.jpg" width="15%" height="15%"> <img src="det.jpg" width="15%" height="15%"><br><h4>
+	 Enter your name: <input type="text" name="uname"><br>
+	 Enter your contct number: <input type="text" name="pwd"><br><br>
+	 Choose your entry time: <br>
+			     <input type="radio" name="gender" value="10:00">10:00 am
+			     <input type="radio" name="gender" value="11:00">11:00 am
+			     <input type="radio" name="gender" value="12:00">12:00 pm
+			     <input type="radio" name="gender" value="01:00">01:00 pm<br>
+			     <input type="radio" name="gender" value="02:00">02:00 pm
+			     <input type="radio" name="gender" value="03:00">03:00 pm
+			     <input type="radio" name="gender" value="04:00">04:00 pm
+			     <input type="radio" name="gender" value="05:00">05:00 pm<br>
+			     <input type="radio" name="gender" value="06:00">06:00 pm
+			     <input type="radio" name="gender" value="07:00">07:00 pm
+			     <input type="radio" name="gender" value="08:00">08:00 pm
+			     <input type="radio" name="gender" value="09:00">09:00 pm<br><br>
+	 Choose your time of spent: <br>
+			     <input type="radio" name="stime" value="30">30 min
+			     <input type="radio" name="stime" value="60">1 hour
+			     <input type="radio" name="stime" value="90">1h 30 min<br>
+			     <input type="radio" name="stime" value="120">2hours
+			     <input type="radio" name="stime" value="150">2h 30min
+			     <input type="radio" name="stime" value="180">3hours<br><br>
+	 Enter your Desired table no: <input type="number" name="age"><br>
+	 Enter the date: <input type="text" name="sdate"><br> 
+	 Enter your email: <input type="text" name="email"><br>
+	 Any arrengements needed:
+		 <select name="country">
+		<option value="Default">(Please select an option)</option>
+		<option value="bal">decorate with balloons</option>
+		<option value="flow">decorate with flowers</option>
+		<option value="none">nothing</option>
+		 </select><br>
+	 Languages Known: 
+		 Telugu: <input type="checkbox" name="lang" value="Telugu"/>
+		 English: <input type="checkbox" name="lang" value="English"/>
+		 Hindi: <input type="checkbox" name="lang" value="Hindi"/>
+	<p>For payment contact the number:807877<br>please complete the payment before twodays of your day whether table get cancelled</p>
+	<input type="submit"><input type="reset"></h4>
+</center>
+ </form>
+ </body>
+</html>
